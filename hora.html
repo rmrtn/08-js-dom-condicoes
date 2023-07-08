@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Hora do dia </title>
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+    body {
+    background: rgb(245, 168, 222);
+    font: normal 15pt Arial;
+}
+
+    header {
+    color: rgb(51, 41, 48);
+    text-align: center;
+}
+
+    section {
+        background-color: white;
+        border-radius: 10px;
+        padding: 15px;
+        width: 500px;
+        margin: auto;
+        box-shadow: 5px 5px 10px rgb(92, 74, 86);
+}
+
+    footer {
+    color: black;
+    text-align: center;
+    font-style: italic;
+}
+    </style>
+</head>
+<body onload="carregar()">
+  <header>
+    <h1>Hora do dia</h1>
+  </header>
+  <section>
+    <div id="msg">
+        Aqui vai aparecer a mensagem...
+    </div>
+    <div id="foto">
+        <img id="imagem" src="fotomanha.png" alt="Foto do dia">
+    </div>
+  </section> 
+  <footer>
+    <p>&copy; RaissaMartinsNascimento</p>
+  </footer>
+  <script>
+     function carregar() {
+var msg = window.document.getElementById('msg')
+var img = window.document.getElementById('imagem')
+var data = new Date()
+var hora = data.getHours()
+msg.innerHTML = `Agora são ${hora} horas.`
+if (hora >= 0 && hora < 12) {
+    // BOM DIA!!!
+    img.src = 'fotomanha.png'
+    document.body.style.background = '#03bb85'
+} else if (hora >= 12 && hora <= 18) {
+    //BOA TARDE!!!
+    img.src = 'fototarde.png'
+    document.body.style.background = '#ff8c00'
+} else {
+    // BOA NOITE!!!
+    img.src = 'fotonoite.png'
+    document.body.style.background = '#0047ab' 
+}
+}
+  </script>
+</body>
+</html>

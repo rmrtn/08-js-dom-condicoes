@@ -1,1 +1,6 @@
-# 08-js-dom-condicoes
+# 08-js-dom-
+# #08 - JS: DOM e Condições
+
+### Raissa Martins Nascimento
+
+[comment]: <> (Raissa Martins Nascimento)
